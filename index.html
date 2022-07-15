@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="todo-list-container">
+      <div class="header">
+        <h1>To-Do:</h1>
+      </div>
+      <div class="menu-wrapper">
+        <div class="todo-creater-button">
+          <i class="fa-solid fa-square-plus"></i>
+        </div>
+        <div class="to-do-section-button">
+          <i class="fa-solid fa-inbox"></i>
+        </div>
+        <div class="completed-section-button">
+          <i class="fa-solid fa-square-check"></i>
+        </div>
+      </div>
+      <div class="todos-wrapper">
+        <h1
+          class="section-title"
+          style="
+            color: #a594f9;
+            background-color: #e5d9f2;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 5px;
+          "
+        >
+          Not Completed:
+        </h1>
+      </div>
+      <div class="completed-todos-wrapper">
+        <h1
+          class="section-title"
+          style="
+            color: #a594f9;
+            background-color: #e5d9f2;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 5px;
+          "
+        >
+          Completed:
+        </h1>
+      </div>
+    </div>
+    <div class="empty-message" style="color: #cdc1ff">It's empty here...</div>
+  </body>
+  <script src="./scripts.js"></script>
+</html>

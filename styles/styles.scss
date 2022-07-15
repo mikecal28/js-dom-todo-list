@@ -1,0 +1,171 @@
+html {
+  width: 100%;
+  height: 100%;
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: #e5d9f2;
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+
+    .empty-message {
+      position: absolute;
+      z-index: 5;
+      top: 145px;
+      left: 65vw;
+      font-size: max(3vw, 18px);
+    }
+
+    input {
+      width: 100%;
+      height: 30px;
+      font-size: 28px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      color: #a594f9;
+
+      &::placeholder {
+        color: #a594f9;
+      }
+    }
+
+    input[type="checkbox"]:hover {
+      cursor: pointer;
+    }
+
+    .todo-list-container {
+      width: 100%;
+      height: 100%;
+      padding: 20px 5vw 20px 10px;
+      display: grid;
+      grid-template-areas:
+        "c b"
+        "c d";
+      grid-template-rows: 80px 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      // border: 2px solid red;
+
+      .header {
+        grid-area: b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -30vw;
+        font-size: max(1.25vw, 18px);
+        // border: 2px solid blue;
+        background-color: #f5efff;
+        border: 5px solid #a594f9;
+        border-radius: 5px;
+        color: #7371fc;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        input {
+          height: 45px;
+          max-width: 250px;
+          min-width: 180px;
+          margin-left: 15px;
+          outline: none;
+          border: 1px solid lightgray;
+          padding: 0 10px;
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px,
+            rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+      }
+
+      .menu-wrapper {
+        grid-area: c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // gap: min(1vw, 10px);
+        // border: 2px solid blue;
+        background-color: #e5d9f2;
+        margin-right: 30vw;
+
+        > * {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #f5efff;
+          border-radius: max(0.75vw, 10px);
+          width: 9vw;
+          min-width: 100px;
+          height: 8.75vw;
+          min-height: 95px;
+          margin: min(10vw, 50px) 2vw;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          .completed-section-button {
+            min-height: 500px;
+          }
+
+          .fa-square-plus,
+          .fa-square-check {
+            font-size: max(7.75vw, 80px);
+            color: #7371fc;
+          }
+
+          .fa-inbox {
+            font-size: max(7vw, 75px);
+            color: #7371fc;
+          }
+        }
+      }
+
+      .todos-wrapper {
+        grid-area: d;
+        // border: 2px solid blue;
+        background-color: #f5efff;
+        // margin-left: 120px;
+        padding: 15px;
+        margin-left: -30vw;
+        border: 5px solid #a594f9;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        .section-title {
+          font-size: max(3vw, 14px);
+        }
+      }
+
+      .completed-todos-wrapper {
+        display: none;
+        grid-area: d;
+        // border: 2px solid blue;
+        border: 5px solid #a594f9;
+        background-color: #f5efff;
+        padding: 15px;
+        margin-left: -30vw;
+        border-radius: 10px;
+        // margin-right: 120px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        .section-title {
+          font-size: max(3vw, 14px);
+        }
+      }
+    }
+  }
+}
